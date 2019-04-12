@@ -17,12 +17,6 @@ class Triangle
       elsif length1 != length2 && length3 != length2 && length1 != length3
         :scalene
       end
-    end
-  end
-
-  def valid_triangle?
-    if greater_than_zero? && triangle_inequality?
-      return true
     else
       begin
         raise TriangleError
@@ -30,6 +24,10 @@ class Triangle
         puts error.message
       end
     end
+  end
+
+  def valid_triangle?
+    greater_than_zero? && triangle_inequality?
   end
 
   def greater_than_zero?
