@@ -21,17 +21,20 @@ class Triangle
   end
 
   def valid_triangle?
-    greater_than_zero? && triangle_inequality? ? true : exception
-  end
-
-  def exception
-    binding.pry
-    begin
-      raise TriangleError
-    rescue TriangleError => error
-      puts error.message
+    if greater_than_zero? && triangle_inequality?
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
+    else
+      true
     end
   end
+
+  # def exception
+  #
+  # end
 
   def greater_than_zero?
     lengths = [length1, length2, length3]
