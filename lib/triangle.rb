@@ -32,10 +32,6 @@ class Triangle
     end
   end
 
-  # def exception
-  #
-  # end
-
   def greater_than_zero?
     lengths = [length1, length2, length3]
     lengths.all? {|l| l > 0}
