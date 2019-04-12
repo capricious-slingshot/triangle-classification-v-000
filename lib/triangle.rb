@@ -19,7 +19,7 @@ class Triangle
       end
     else
       begin
-        raise TriangleError
+        raise Triangle::TriangleError
       rescue TriangleError => error
         error.message
       end
