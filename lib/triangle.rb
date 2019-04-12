@@ -21,7 +21,7 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError => error
-        puts error.message
+        error.message
       end
     end
   end
