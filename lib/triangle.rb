@@ -28,7 +28,7 @@ class Triangle
         puts error.message
       end
     else
-      true
+      return true
     end
   end
 
