@@ -21,7 +21,7 @@ class Triangle
   end
 
   def valid_triangle?
-    if greater_than_zero? && triangle_inequality?
+    if !greater_than_zero? || !triangle_inequality?
       begin
         raise TriangleError
       rescue TriangleError => error
